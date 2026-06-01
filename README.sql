@@ -68,19 +68,18 @@ Tracks every order placed by customers.
 | Quantity      | INT             | Number of copies ordered                 |
 | Total_Amount  | NUMERIC(10,2)   | Total price for the order                |
 
----
+
 
 ## 🔗 Entity Relationship
 
-```
+
 Customers (Customer_ID) ──< Orders >── Books (Book_ID)
-```
+
 
 - One customer can place many orders
 - One book can appear in many orders
 - The `Orders` table acts as a junction/fact table
 
----
 
 ## 📋 SQL Queries Covered
 
@@ -120,7 +119,6 @@ Customers (Customer_ID) ──< Orders >── Books (Book_ID)
 | Customers with at least 2 orders | Uses `HAVING COUNT >= 2` |
 | Most frequently ordered book | Groups by Book_ID, orders by count descending |
 
----
 
 ## 📈 Key Business Insights the Queries Answer
 
@@ -130,7 +128,6 @@ Customers (Customer_ID) ──< Orders >── Books (Book_ID)
 - **Where are our customers located?** → City/country breakdown of big spenders
 - **Which books need restocking?** → Lowest stock query
 
----
 
 ## 🚀 How to Run
 
@@ -139,22 +136,17 @@ Customers (Customer_ID) ──< Orders >── Books (Book_ID)
 ```sql
 CREATE DATABASE OnlineBookstore;
 USE OnlineBookstore;
-```
+
 3. Execute the table creation statements for `Books`, `Customers`, and `Orders`
 4. Insert your sample data
 5. Run any of the provided queries to explore the data
 
----
 
 ## 📁 File Structure
 
-```
 SQL_online_bookstore/
 │
 └── README.sql        # All SQL code — schema + queries
-```
-
----
 
 ## 💡 Concepts Demonstrated
 
